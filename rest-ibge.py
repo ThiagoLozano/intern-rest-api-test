@@ -12,8 +12,10 @@ class ContadorRegioes:
                 self.Converter_para_CSV()
             else:
                 print("Erro de Conexão: {} - Verifique se a sua conexão ou a URL estão de acordo".format(self.url))
+                exit(0)
         except Exception as erro:
             print("Erro: {}".format(erro))
+            exit(0)
 
     # Método que cria o CSV.
     def Converter_para_CSV(self):
